@@ -11,9 +11,9 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     SharedModule,
     RouterModule.forRoot([
-      { path: 'products', component: ProductListComponent }
-      { path: 'products/:id', component: ProductDetailComponent }
-      { path: 'products/:id/item/:itemId', component: ProductEditComponent }
+      { path: 'products', component: ProductListComponent },
+      { path: 'products/:id', component: ProductDetailComponent },
+      { path: 'products/:id/edit', component: ProductEditComponent }
     ])
   ],
   declarations: [
