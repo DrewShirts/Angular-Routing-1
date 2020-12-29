@@ -16,7 +16,7 @@ export class AppComponent {
   loading = true;
 
   constructor(private authService: AuthService, private router: Router,
-    private messageService: MessageService) {
+              private messageService: MessageService) {
     router.events.subscribe((routerEvent: Event) => {
       this.checkRouterEvent(routerEvent);
     });
