@@ -1,6 +1,10 @@
 {
   "name": "apm",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrewShirts/Angular-Routing-1.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
