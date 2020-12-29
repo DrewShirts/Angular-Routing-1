@@ -16,8 +16,11 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule.forChild([
       {
         path: 'products',
-        component: ProductListComponent,
         children: [
+          {
+            path: '',
+            component: ProductListComponent,
+          },
           {
             path: ':id',
             component: ProductDetailComponent,
@@ -25,7 +28,7 @@ import { SharedModule } from '../shared/shared.module';
           },
           {
             path: ':id/edit',
-            component: ProductEditComponent, 
+            component: ProductEditComponent,
             resolve: { resolvedData: ProductResolver },
             children: [
               { path: '', redirectTo: 'info', pathMatch: 'full' },
