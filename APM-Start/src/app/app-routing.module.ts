@@ -11,7 +11,7 @@ import { AuthGuard } from './user/auth.guard';
       { path: 'welcome', component: WelcomeComponent },
       {
         path: 'products',
-        canLoad: [AuthGuard],
+        canActivate: [AuthGuard],
         loadChildren: () =>
           import('./products/product.module').then(m => m.ProductModule)
       },
